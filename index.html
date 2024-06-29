@@ -18,18 +18,131 @@
 
 <body>
   <header class="header">
-    <div class="header__content">
-      <h1 class="header__caption">Welcome to amazing book shop!
-      </h1>
-      <input class="header__search-input" type="search" placeholder="Search...">
+    <div class="container">
+      <div class="header__content">
+        <h1 class="header__caption">Welcome to amazing book shop!
+        </h1>
+        <input class="header__search-input" type="search" placeholder="Search...">
+      </div>
     </div>
   </header>
 
   <!-- MAIN SECTION -->
   <main>
-    
+    <div class="container">
+      <!--BOOKS CATALOG -->
+      <section class="books-catalog">
+        <h2 class="title books-catalog__title">Books catalog</h2>
+
+        <div class="books-wrapper">
+
+          <div class="book-card">
+            <div class="book-image">
+              <img class="book-cover" src="./images/books/JavaScript_The Good Parts.jpg" alt="JS book" draggable="true">
+            </div>
+            <div class="book-description">
+              <h3 class="book-title">
+                JavaScript: The Good Parts: The Good Parts
+              </h3>
+              <p class="book-author">Denis Rothman</p>
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!-- <div class="rating-value">0</div> -->
+              </div>
+              <p class="price">Price: $<span id="price">30</p>
+              <div class="btns-wrapper">
+                <button class="btn btn-orange">Add to cart</button>
+                <button class="btn btn-transparent">Show more</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CART -->
+      <aside class="cart-section">
+        <h2 class="title cart-section__title">
+          Your cart <i class="fa-solid fa-cart-shopping"></i>
+        </h2>
+
+        <button class="close-button" type="button"><i class="fa-solid fa-circle-xmark"></i></button>
+
+        <img src="./images/extra/cart-empty.jpg" alt="empty cart image" class="empty-cart">
+
+        <div class="cart-wrapper">
+          <!-- << button -->
+          <button class="circle-btn prev-btn" type="button">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <!-- BOOKS IN A CART -->
+          <div class="books-cart slider">
+
+            <div class="book-card">
+              <div class="book-image">
+                <img class="book-cover" src="./images/books/JavaScript_The Good Parts.jpg" alt="JS book"
+                  draggable="true">
+              </div>
+              <div class="book-description">
+                <h3 class="book-title">
+                  JavaScript: The Good Parts: The Good Parts
+                </h3>
+                <p class="book-author">Denis Rothman</p>
+                <p class="price">Price: $<span id="price">30</p>
+                <div class="btns-wrapper">
+                  <button class="circle"><i class="fa-solid fa-minus"></i></button>
+                  <span class="book-amount">0</span>
+                  <button class="circle"><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- >> button -->
+          <button class="circle-btn next-btn" type="button">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="total-price">
+          <p class="price">Total: $<span id="total-price">30</p>
+          <a href="confirm-order.html" class="btn btn-orange">Confirm Order</a>
+        </div>
+
+      </aside>
+    </div>
   </main>
 
+  <!-- SMALL CART -->
+  <button class="small-basket">
+    <i class="fa-solid fa-basket-shopping"></i>
+  </button>
+
+  <!-- POPUP DIALOG -->
+  <div class="dialog-wrapper show-dialog">
+
+    <div class="dialog-content">
+      <button class="close-button" type="button">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+      <div class="dialog-book-title">
+        Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript
+      </div>
+      <div class="dialog-book-desc">
+        Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete
+        examples. You’ll learn how to choose the right programming style for each project, manage unanticipated
+        problems, and work more successfully with every facet of JavaScript programming from data structures to
+        concurrency
+      </div>
+    </div>
+
+  </div>
 
   <script src="js/main.js" type="module"></script>
 </body>

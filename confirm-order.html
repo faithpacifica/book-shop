@@ -18,7 +18,82 @@
 </head>
 
 <body>
-    Confirm order page
+    <div class="container">
+        <h2 class="title ">Confirm your order</h2>
+
+        <form action="#" class="confirmation-form">
+            <!-- close button -->
+            <a href="index.html" class="close-button">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </a>
+            <div class="form-inner">
+                <div class="input-wrapper">
+                    <label for="firstname">Name</label>
+                    <input class="input" type="text" id="firstname" minlength="4">
+                    <p class="error-message"> The field is invalid (minimum 4 letters, no spaces)</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="surname">Surame</label>
+                    <input class="input" type="text" id="surname" minlength="5">
+                    <p class="error-message"> The field is invalid (minimum 5 letters, no spaces)</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="delivery-date">Delivery date</label>
+                    <input class="input" type="date" id="delivery-date" min="1">
+                    <img src="./images/extra/calendar.png" alt="calendar">
+                    <p class="error-message">  The field is invalid (not earlier than tomorrow)</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="street">Street</label>
+                    <input class="input" type="text" id="street" minlength="5">
+                    <p class="error-message">The field is invalid (minimum 5 letters/numbers)</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="house-number">House number</label>
+                    <input class="input" type="number" id="house-number" min="1">
+                    <p class="error-message">The field is invalid (positive numbers only)</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="flat">Flat</label>
+                    <input class="input" type="text" id="flat">
+                    <p class="error-message"> The field is invalid (positive numbers and dash only)</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="flat">Payment type</label>  
+                     <span class="payment-type">
+                        <label for="cash" class="">Cash <input type="radio" name="payment" value="Cash" id="cash" class=""></label>
+                        <label for="card" class="">Card <input type="radio" name="payment" value="Card" id="card" checked class=""></label>
+                     </span>
+                    <!-- <p class="error-message">  One of them has to be checked</p> -->
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="gift1">Choose a gift</label>
+                    <select id="gift1">
+                        <option value="none">None</option>
+                        <option value="pack">Pack as a gift</option>
+                        <option value="poscard">Add poscard</option>
+                        <option value="discount">Provide 2% discount to the text time</option>
+                        <option value="pen">Branded pen or pencil</option>
+                    </select>
+                </div>
+                <div class="input-wrapper">
+                    <label for="gift-2">Choose a gift</label>
+                    <select id="gift2">
+                        <option value="none">None</option>
+                        <option value="pack">Pack as a gift</option>
+                        <option value="poscard">Add poscard</option>
+                        <option value="discount">Provide 2% discount to the text time</option>
+                        <option value="pen">Branded pen or pencil</option>
+                    </select>
+                </div>
+               
+            </div>
+            <button type="submit">Complete</button>
+
+        </form>
+
+    </div>
 
 
     <script src="js/main.js"></script>
